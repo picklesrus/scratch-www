@@ -1,6 +1,23 @@
 {
-  "download.title": "Scratch 2.0 Offline Editor",
-  "download.intro": "You can install the Scratch 2.0 editor to work on projects without an internet connection. This version will work on Windows and MacOS.",
+  "download.title": "Scratch 3.0 Desktop",
+  "download.intro": "You can install the Scratch 3.0 editor to work on projects without an internet connection. This version will work on Windows and MacOS.",
+  "download.imgAltDownloadIllustration" : "Scratch 3.0 Desktop screenshot",
+  "download.directDownload": "Direct Download",
+  "download.installScratchDesktop": "Install Scratch Desktop",
+  "download.downloadAndInstall": "Download and install Scratch Desktop",
+  "download.troubleshootingTitle": "FAQ / Troubleshooting",
+  "download.haveYouInstalled": "Have you installed Scratch Desktop?",
+  "download.answerInstalled": "You will need to do some things",
+  "download.question2": "Have another question?",
+  "download.answer2": "You will need to do some things",
+  "download.olderVersions": "Older Versions",
+  "download.lookingForOlder": "Looking for an older version of Scratch Desktop?",
+  "download.scratch14Desktop": "Scratch 1.4 Desktop",
+  "download.scratch2Desktop": "Scratch 2.0 Desktop",
+  "download.startScratchDesktop": "Start Scratch Desktop and move it to your Applications folder.",
+
+
+
   "download.introMac": "<b>Note for Mac Users:</b> the latest version of Scratch 2.0 Offline requires Adobe AIR 20. To upgrade to Adobe AIR 20 manually, go <a href=\"https://get.adobe.com/air/\">here</a>.",
   "download.installation": "Installation",
   "download.airTitle": "Adobe AIR",

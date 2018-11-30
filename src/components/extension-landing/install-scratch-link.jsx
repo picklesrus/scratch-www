@@ -10,11 +10,21 @@ const Step = require('../../components/steps/step.jsx');
 require('./extension-landing.scss');
 
 const InstallScratchLink = ({
-    currentOS
+    currentOS,
+    downloadAndInstallMsgId,
+    installHeaderTitleMsgId,
+    installStartMsgId,
+    startScreenshotImageName
 }) => (
     <div className="blue install-scratch-link">
         <FlexRow className="inner column">
-            <h2><FormattedMessage id="installScratchLink.installHeaderTitle" /></h2>
+            <h2>
+                {installHeaderTitleMsgId ? (
+                    <FormattedMessage id={installHeaderTitleMsgId} />
+                ) : (
+                    <FormattedMessage id="installScratchLink.installHeaderTitle" />
+                )}
+            </h2>
             <Steps>
                 <div className="step">
                     <Step
@@ -22,7 +32,11 @@ const InstallScratchLink = ({
                         number={1}
                     >
                         <span className="step-description">
-                            <FormattedMessage id="installScratchLink.downloadAndInstall" />
+                            {downloadAndInstallMsgId ? (
+                                <FormattedMessage id={downloadAndInstallMsgId} />
+                            ) : (
+                                <FormattedMessage id="installScratchLink.downloadAndInstall" />
+                            )}
                         </span>
                         <div className="downloads-container">
                             <a
@@ -60,7 +74,11 @@ const InstallScratchLink = ({
                     number={2}
                 >
                     <span className="step-description">
-                        <FormattedMessage id="installScratchLink.startScratchLink" />
+                        {installStartMsgId ? (
+                            <FormattedMessage id={installStartMsgId} />
+                        ) : (
+                            <FormattedMessage id="installScratchLink.startScratchLink" />
+                        )}
                     </span>
                     <div className="step-image">
                         <img
@@ -68,7 +86,9 @@ const InstallScratchLink = ({
                             className="screenshot"
                             src={`/images/scratchlink/${
                                 currentOS === OS_ENUM.WINDOWS ? 'windows' : 'mac'
-                            }-toolbar.png`}
+                            }-${
+                                startScreenshotImageName ? startScreenshotImageName : 'toolbar'
+                            }.png`}
                         />
                     </div>
                 </Step>
@@ -77,8 +97,18 @@ const InstallScratchLink = ({
     </div>
 );
 
-InstallScratchLink.propTypes = {
-    currentOS: PropTypes.string
-};
 
+InstallScratchLink.propTypes = {
+    currentOS: PropTypes.string,
+    downloadAndInstallMsgId: PropTypes.string,
+    installHeaderTitleMsgId: PropTypes.string,
+    installStartMsgId: PropTypes.string,
+    startScreenshotImageName: PropTypes.string
+};
+// InstallScratchLink.defaultProps = {
+//     downloadAndInstallMsgId: 'installScratchLink.installHeaderTitle',
+//     installHeaderTitleMsgId: 'installScratchLink.downloadAndInstall',
+//     installStartMsgId: 'installScratchLink.startScratchLink'
+//
+//};
 module.exports = InstallScratchLink;
