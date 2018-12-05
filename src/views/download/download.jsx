@@ -42,7 +42,7 @@ class Downloads extends ExtensionLanding {
                             src="/images/download/placeholder.png"
                             width="40"
                         />
-                            <FormattedMessage id="download.title" />
+                        <FormattedMessage id="download.title" />
                         </h1>
                         <FormattedMessage id="download.intro" />
                     </FlexRow>
@@ -95,7 +95,9 @@ class Downloads extends ExtensionLanding {
                                 src="/images/scratch_1.4/scratch-mac.png"
                             />
                             <p>
-                                <FormattedMessage id="download.scratch14Desktop" />
+                                <a href="/scratch_1.4">
+                                    <FormattedMessage id="download.scratch14Desktop" />
+                                </a>
                             </p>
                         </div>
                         <div className="older-version">
