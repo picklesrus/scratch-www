@@ -273,6 +273,13 @@
         "title": "Teacher Registration"
     },
     {
+        "name": "join",
+        "pattern": "^/join/?$",
+        "routeAlias": "^/join/?$",
+        "view": "join/join",
+        "title": "Join Scratch"
+    },
+    {
         "name": "teacherwaitingroom",
         "pattern": "^/educators/waiting",
         "routeAlias": "/educators(?:/(faq|register|waiting))?/?$",
